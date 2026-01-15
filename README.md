@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SCIC Project 9 – Product Management Web App
 
-## Getting Started
+This is a responsive web application built with **Next.js**, **React**, and **Tailwind CSS** for managing products. It allows users to view, add, and manage products through a clean and professional interface. The app includes authentication-protected routes, form validation, and local state persistence to ensure a smooth and reliable user experience.
 
-First, run the development server:
 
-```bash
+## Setup & Installation
+
+### Clone the repository
+git clone https://github.com/abdulrehmanaarmaan/scic-assignment-9
+
+### Install Dependencies
+npm install
+
+### Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Route Summary
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Route                 | Purpose                                     |
+|-----------------------|---------------------------------------------|
+| `/`                   | Landing page / Home                         |
+| `/login`              | Login page for accessing protected routes   |
+| `/items-list`         | Displays all products in a responsive grid  |
+| `/add-item`           | Protected route to add a new product        |
+| `/item-details/[id]`  | View detailed information for a product     |
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Implemented Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* User authentication with mock credentials
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Protected routes for adding products
 
-## Deploy on Vercel
+* Product listing in a responsive grid layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Product detail view with image, description, and price
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Add Product form with input validation, image URL validation (only loadable images allowed), and local storage persistence for unsaved form inputs
+
+* Responsive design for both desktop and mobile
+
+* Professional UI/UX consistency including unified button styles, border radius, spacing, and colors, with clear call-to-action for adding items
+
+* Toast notifications for success/error events
+
+
+## Brief Explanation of Features
+
+* Login: Users log in with credentials (manager@sciccompany.com / SecurePass123!) to access protected routes. Form state persists if the user navigates away accidentally.
+
+* Items List: Displays all products in a professional, responsive grid. Users can view details or navigate to add new products via a clearly placed button.
+
+* Add Item: Allows authenticated users to add products with proper validation. Image URLs are verified to ensure they load correctly. Unsaved form inputs are temporarily stored in localStorage to prevent data loss.
+
+* Item Details: Shows complete details about a selected product, including image, description, and price.
+
+* Notifications: Toast messages provide instant feedback for actions such as login success/failure, adding items, or errors.
