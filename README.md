@@ -47,7 +47,7 @@ npm run dev
 
 ## Brief Explanation of Features
 
-* Login: Users log in with credentials (manager@sciccompany.com / SecurePass123!) to access protected routes. Form state persists if the user navigates away accidentally.
+* Login: Users log in with credentials (student@sciccompany.com / SecurePass123!) to access protected routes. Form state persists if the user navigates away accidentally.
 
 * Items List: Displays all products in a professional, responsive grid. Users can view details or navigate to add new products via a clearly placed button.
 
