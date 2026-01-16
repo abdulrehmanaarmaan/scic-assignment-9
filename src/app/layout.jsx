@@ -4,10 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+const inter = Inter();
 
 // const geistMono = Geist_Mono({
 // variable: "--font-geist-mono",
@@ -24,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         // className={`${inter.variable} ${geistMono.variable} antialiased`}
-        className={`${inter.variable} antialiased`}
+        className={`${inter.className} antialiased`}
       >
         <Toaster></Toaster>
         <Navbar></Navbar>
