@@ -33,10 +33,10 @@ const ItemsList = async () => {
 
             {/* Add Item Button */}
             <Link
-                href="/add-item"
+                href="/add-product"
                 className="inline-flex items-center gap-2 text-sm font-medium hover:bg-primary/90 shrink-0 text-white px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition cursor-pointer mb-10"
             >
-                + Add Item
+                + Add Product
             </Link>
 
             {/* Items Grid */}
@@ -72,7 +72,7 @@ const ItemsList = async () => {
                                 </span>
 
                                 <Link
-                                    href={`/item-details/${product?._id}`}
+                                    href={`/product-details/${product?._id}`}
                                     className="text-sm font-medium text-primary hover:underline"
                                 >
                                     View Details →

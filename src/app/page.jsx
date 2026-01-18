@@ -32,9 +32,9 @@ export default async function Home() {
         </p>
 
         <div className="flex justify-center gap-4">
-          <Link href="/items-list">
+          <Link href="/products-list">
             <button className="text-white px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition cursor-pointer">
-              View Items
+              View Products
             </button>
           </Link>
           <Link href="/login">
@@ -57,7 +57,7 @@ export default async function Home() {
           <div>
             <h3 className="text-xl font-semibold mb-2">Clear Details</h3>
             <p className="text-gray-600">
-              Each item includes name, description, price, and visual preview.
+              Each product includes name, description, price, and visual preview.
             </p>
           </div>
           <div>
@@ -133,9 +133,9 @@ export default async function Home() {
         <p className="text-gray-600 mb-8">
           View the full list of products or log in to access protected features.
         </p>
-        <Link href="/items-list">
+        <Link href="/products-list">
           <button className="text-white px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition cursor-pointer">
-            Go to Items
+            Go to Products
           </button>
         </Link>
       </section>

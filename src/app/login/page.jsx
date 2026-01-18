@@ -30,7 +30,7 @@ const Login = () => {
             localStorage.removeItem("loginEmail");
             localStorage.removeItem("loginPassword"); // clear persisted values
 
-            router.push("/items-list")
+            router.push("/products-list")
 
         }
         else {

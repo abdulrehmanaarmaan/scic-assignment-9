@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <Toaster></Toaster>
         <Navbar></Navbar>
 
-        <main className='bg-gray-50 text-gray-900'>{children}</main>
+        <main className='bg-gray-50 text-gray-900 min-h-[calc(100vh - 302px)]'>{children}</main>
 
         <Footer></Footer>
       </body>

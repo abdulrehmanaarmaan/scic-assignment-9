@@ -14,7 +14,7 @@ const getProduct = async (id) => {
     }
 }
 
-const ItemDetails = async ({ params }) => {
+const ProductDetails = async ({ params }) => {
 
     const query = await params
 
@@ -34,7 +34,7 @@ const ItemDetails = async ({ params }) => {
                     Home
                 </Link>{" "}
                 /{" "}
-                <Link href="/items-list" className="hover:underline">
+                <Link href="/products-list" className="hover:underline">
                     Products List
                 </Link>{" "}
                 / <span className="font-semibold text-gray-700">{name}</span>
@@ -63,7 +63,7 @@ const ItemDetails = async ({ params }) => {
                     {/* Actions */}
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link
-                            href="/items-list"
+                            href="/products-list"
                             className="px-6 py-3 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition text-center"
                         >
                             Back to Products
@@ -86,4 +86,4 @@ const ItemDetails = async ({ params }) => {
     );
 };
 
-export default ItemDetails;
+export default ProductDetails;

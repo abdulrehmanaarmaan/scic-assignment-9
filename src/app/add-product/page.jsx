@@ -81,12 +81,12 @@ const AddItem = () => {
             // ✅ Validate image URL before sending
             const isValidImage = await checkImage(payload.image);
             if (!isValidImage) {
-                setError("Image URL is not valid or accessible");
+                setError("Image URL is not valid or accessible.");
                 setLoading(false);
                 return;
             }
 
-            const res = await fetch("http://localhost:3000/api/products", {
+            const res = await fetch("https://scic-project-9.vercel.app/api/products", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -113,7 +113,7 @@ const AddItem = () => {
             // ✅ Clear saved form from localStorage
             localStorage.removeItem("addItemForm");
 
-            router.push("/items-list");
+            router.push("/products-list");
         } catch (err) {
             setError(err.message);
         } finally {
@@ -185,7 +185,7 @@ const AddItem = () => {
                     <button
                         disabled={loading}
                         className="w-full bg-black text-white disabled:opacity-60 cursor-pointer rounded-lg px-6 py-3 text-sm font-medium hover:bg-black/90 transition">
-                        {loading ? "Adding..." : "Add Item"}
+                        {loading ? "Adding..." : "Add Product"}
                     </button>
                 </form>
             </div>

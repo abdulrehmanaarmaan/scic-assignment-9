@@ -21,9 +21,9 @@ npm run dev
 |-----------------------|---------------------------------------------|
 | `/`                   | Landing page / Home                         |
 | `/login`              | Login page for accessing protected routes   |
-| `/items-list`         | Displays all products in a responsive grid  |
-| `/add-item`           | Protected route to add a new product        |
-| `/item-details/[id]`  | View detailed information for a product     |
+| `/products-list`         | Displays all products in a responsive grid  |
+| `/add-product`           | Protected route to add a new product        |
+| `/product-details/[id]`  | View detailed information for a product     |
 
 
 ## Implemented Features
@@ -49,10 +49,10 @@ npm run dev
 
 * Login: Users log in with credentials (student@sciccompany.com / SecurePass123!) to access protected routes. Form state persists if the user navigates away accidentally.
 
-* Items List: Displays all products in a professional, responsive grid. Users can view details or navigate to add new products via a clearly placed button.
+* Products List: Displays all products in a professional, responsive grid. Users can view details or navigate to add new products via a clearly placed button.
 
-* Add Item: Allows authenticated users to add products with proper validation. Image URLs are verified to ensure they load correctly. Unsaved form inputs are temporarily stored in localStorage to prevent data loss.
+* Add Product: Allows authenticated users to add products with proper validation. Image URLs are verified to ensure they load correctly. Unsaved form inputs are temporarily stored in localStorage to prevent data loss.
 
-* Item Details: Shows complete details about a selected product, including image, description, and price.
+* Product Details: Shows complete details about a selected product, including image, description, and price.
 
-* Notifications: Toast messages provide instant feedback for actions such as login success/failure, adding items, or errors.
+* Notifications: Toast messages provide instant feedback for actions such as login success/failure, adding products, or errors.

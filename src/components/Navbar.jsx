@@ -14,12 +14,23 @@ const Navbar = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [mounted, setMounted] = useState(false); // to avoid SSR mismatch
 
+    queueMicrotask(() => {
+        if (savedEmail) setEmail(savedEmail);
+        if (savedPassword) setPassword(savedPassword);
+    });
+
     useEffect(() => {
-        setMounted(true);
-        const auth = Cookies.get("auth") === "true";
-        setIsAuthenticated(auth);
+        queueMicrotask(() => {
+            setMounted(true);
+        })
     }, []);
 
+    useEffect(() => {
+        const auth = Cookies.get("auth") === "true";
+        queueMicrotask(() => {
+            setIsAuthenticated(auth);
+        })
+    }, [pathname]);
 
     const handleLogout = () => {
         Cookies.remove("auth");
@@ -45,8 +56,8 @@ const Navbar = () => {
 
                 {/* Navigation */}
                 <nav className="flex items-center gap-6">
-                    <Link href="/items-list" className={linkClass("/items-list")}>
-                        Items
+                    <Link href="/products-list" className={linkClass("/products-list")}>
+                        Products
                     </Link>
 
                     {!isAuthenticated ? (
